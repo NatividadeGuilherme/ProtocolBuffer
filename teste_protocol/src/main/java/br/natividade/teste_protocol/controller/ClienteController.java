@@ -21,7 +21,7 @@ public class ClienteController {
 	@Autowired
 	private ClienteUseCase useCase;
 
-	@PostMapping(name = "/criar",consumes = "application/x-protobuf", produces = "application/x-protobuf")
+	@PostMapping(value = "/criar",consumes = "application/x-protobuf", produces = "application/x-protobuf")
 	public ResponseEntity<ClienteResponse> salvarCliente(@RequestBody ClienteRequest cliente){
 		System.out.println("To aqui");
 		ClienteDomain domain = ClienteMapper.toDomain(cliente);

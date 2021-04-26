@@ -30,7 +30,7 @@ public class ClienteUseCase {
 		
 		RequestEntity<ClienteGravar> request = RequestEntity.post(new URI("http://127.0.0.1:8081/cliente/criar"))
 				.header("Content-Type", "application/x-protobuf")
-				.header("Accept", "application/x-protobuf")
+//				.header("Accept", "application/x-protobuf")
 				.body(clienteGravar);
 		
 		

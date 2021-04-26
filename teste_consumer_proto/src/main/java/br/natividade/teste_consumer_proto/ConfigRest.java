@@ -1,6 +1,6 @@
 package br.natividade.teste_consumer_proto;
 
-import java.util.Collections;
+import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,7 @@ public class ConfigRest{
 
 	@Bean
 	public RestTemplate restTemplate(ProtobufHttpMessageConverter hmc) {
-		return new RestTemplate(Collections.singletonList(hmc));
+		return new RestTemplate(Arrays.asList(hmc));
 	}
 	
 }

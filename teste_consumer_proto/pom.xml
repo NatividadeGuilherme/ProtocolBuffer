@@ -19,6 +19,7 @@
 		<os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
 		<protobuf-java.version>3.5.1</protobuf-java.version>
 		<protobuf-maven-plugin.version>0.5.1</protobuf-maven-plugin.version>
+		<protobuf-java-format.version>1.4</protobuf-java-format.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.protobuf-java-format</groupId>
+			<artifactId>protobuf-java-format</artifactId>
+			<version>${protobuf-java-format.version}</version>
 		</dependency>
 	</dependencies>
 
