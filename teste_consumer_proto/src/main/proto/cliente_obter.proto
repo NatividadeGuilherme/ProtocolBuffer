@@ -1,0 +1,11 @@
+syntax = "proto3";
+package br.natividade.entrypoint.dto;
+
+option java_outer_classname = "ClienteBuilderObter";
+
+
+message ClienteObter {
+	string nomeCliente = 1;
+	string email = 2;
+	string dataNascimento = 3;
+}

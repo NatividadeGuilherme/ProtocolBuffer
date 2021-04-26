@@ -1,0 +1,16 @@
+syntax = "proto3";
+package br.natividade.entrypoint.dto;
+
+option java_outer_classname = "ClienteRequestBuilder";
+
+
+message ClienteRequest {
+	string nomeCliente = 1;
+	string email = 2;
+	int32 idade = 3;
+	repeated Endereco enderecos = 4; 
+}
+
+message Endereco {
+	string nomeRua = 1;
+}
