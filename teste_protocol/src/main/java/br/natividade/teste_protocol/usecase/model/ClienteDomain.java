@@ -5,6 +5,17 @@ public class ClienteDomain {
 	private String email;
 	private String dataNascimento;
 	private int idade;
+	private String cep;
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	private Endereco endereco;
 
 	public int getIdade() {
 		return idade;
@@ -38,4 +49,11 @@ public class ClienteDomain {
 		this.dataNascimento = dataNascimento;
 	}
 
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
 }

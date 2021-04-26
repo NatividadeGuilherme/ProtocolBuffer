@@ -8,4 +8,12 @@ message ClienteObter {
 	string nomeCliente = 1;
 	string email = 2;
 	string dataNascimento = 3;
+	repeated EnderecoCliente enderecos = 4;
+}
+
+message EnderecoCliente {
+	string logradouro = 1;
+	string bairro = 2;
+	string cidade = 3;
+	string uf = 4;
 }

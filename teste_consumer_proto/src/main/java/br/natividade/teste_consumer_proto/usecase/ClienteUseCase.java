@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import br.natividade.entrypoint.dto.ClienteBuilderGravar;
 import br.natividade.entrypoint.dto.ClienteBuilderGravar.ClienteGravar;
 import br.natividade.entrypoint.dto.ClienteBuilderObter;
 import br.natividade.entrypoint.dto.ClienteBuilderObter.ClienteObter;
@@ -26,18 +25,15 @@ public class ClienteUseCase {
 	public ClienteBuilderObter.ClienteObter obter() throws URISyntaxException {
 		ClienteGravar clienteGravar = ClienteGravar.newBuilder().setEmail("guilherme@gmail.com")
 				.setNomeCliente("Guilherme").setIdade(25)
-				.addEnderecos(ClienteBuilderGravar.Endereco.newBuilder().setNomeRua("Tosta")).build();
+				.setCep("03310000")
+				.build();
 		
 		RequestEntity<ClienteGravar> request = RequestEntity.post(new URI("http://127.0.0.1:8081/cliente/criar"))
 				.header("Content-Type", "application/x-protobuf")
-//				.header("Accept", "application/x-protobuf")
 				.body(clienteGravar);
 		
 		
 		ResponseEntity<ClienteObter> response = restTemplate.exchange(request, ClienteObter.class);
-		
-		System.out.println("Response reseved");
-		System.out.println(response.getStatusCodeValue());
 		
 		if(response.hasBody()) {
 			System.out.println(response.getBody().getDataNascimento());
