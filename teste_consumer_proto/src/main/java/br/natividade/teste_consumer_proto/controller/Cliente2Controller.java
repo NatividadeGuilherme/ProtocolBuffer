@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.natividade.entrypoint.dto.ClienteBuilderObter.ClienteObter;
-import br.natividade.teste_consumer_proto.controller.usecase.ClienteUseCase;
+import br.natividade.teste_consumer_proto.usecase.ClienteUseCase;
 
 @RestController
 @RequestMapping("/cliente2")
